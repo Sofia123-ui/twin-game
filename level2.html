@@ -15,7 +15,14 @@
 <body>
     <div class="game-container">
         <header class="game-header">
-            <h1>Рівень 2</h1>
+            <div class="level-info">
+                <h1>Рівень 2</h1>
+                <button id="toggle-sound"><i class="fa-solid fa-volume-xmark"></i></button>
+            </div>
+            <audio id="background-audio" loop>
+                <source src="audio/background-music.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує цей аудіо елемент.
+            </audio>
             <div id="timer" class="timer">Час: 01:30</div>
             <button class="exit-button">Вийти</button>
         </header>
@@ -38,6 +45,10 @@
     <!-- Успішне проходження рівня -->
     <div class="modal-win" style="display: none;">
         <div class="modal-content-win">
+            <audio id="win-audio">
+                <source src="audio/winning-sound.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує цей аудіо елемент.
+            </audio>
             <dotlottie-player src="https://lottie.host/b7fcc28e-959b-4e65-a049-7d93280b4964/d7EZosMYqP.json" 
             background="transparent" speed="1" loop autoplay></dotlottie-player>
             <p>Вітаємо! Ви чудово впорались із другим рівнем!<br>Готові рухатись далі?</p>
@@ -60,6 +71,10 @@
     <!-- Час вичерпано -->
     <div class="modal-timeout">
         <div class="modal-content-timeout">
+            <audio id="time-out-audio">
+                <source src="audio/timeout-sound.wav" type="audio/mpeg">
+                Ваш браузер не підтримує цей аудіо елемент.
+            </audio>
             <p>Час вичерпано! Спробуйте ще раз.</p>
             <div class="modal-buttons-timeout">
                 <button class="retry-game">Повторити<i class="fa-solid fa-rotate-left icon-space" style="color: #F5EDFF;"></i></button>
@@ -67,7 +82,7 @@
             </div>
         </div>
     </div>
-    
+    <script src="js/audio.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="js/level2.js"></script>
     <script src="js/notifications_lev2.js"></script>
