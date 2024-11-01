@@ -45,7 +45,30 @@ p {
     padding: 20px;
     background-color: #ec93d7;
     border-radius: 20px;
-    color: white;
+    color: #fff;
+}
+
+.level-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#toggle-sound {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: none;
+}
+
+#toggle-sound:hover {
+    color: #B933E0;
+}
+
+#toggle-sound:focus {
+    outline: none;
 }
 
 .timer {
@@ -79,7 +102,6 @@ p {
     margin: 20px 0;
 }
 
-/* Плавний переворот картки */
 .card {
     width: 100px;
     height: 100px;
@@ -210,6 +232,12 @@ dotlottie-player {
     p {
         font-size: 16px;
     }
+    .level-info {
+        gap: 10px;
+    }
+    #toggle-sound {
+        font-size: 18px;
+    }
     .timer {
         font-size: 16px;
         padding: 10px 18px;
@@ -247,6 +275,12 @@ dotlottie-player {
     }
     p {
         font-size: 14px;
+    }
+    .level-info {
+        gap: 10px; 
+    }
+    #toggle-sound {
+        font-size: 18px;
     }
     .timer {
         font-size: 14px;
